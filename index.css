@@ -9,18 +9,13 @@ body {
     padding: 40px 20px;
     text-align: center;
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 20% 75%;
     justify-content: space-between;
 }
 
-#nav {
-    position: sticky;
-}
-
 #nav ul {
-    width: 60%;
+    width: 100%;
     float: left;
-    position: sticky;
     box-shadow: 0px 0px 10px 1px white;
     border-radius: 8px;
     padding: 20px 24px;
@@ -29,10 +24,6 @@ body {
     margin: 0 auto;
     text-align: center;
     list-style-type: none;
-}
-
-#nav ul {
-    width: 100%;
 }
 
 #nav ul li {
@@ -119,4 +110,19 @@ p {
 
 .center {
     text-align: center;
+}
+
+@media only screen and (max-width: 1200px) { 
+    body {
+        grid-template-columns: 100%;
+    }
+    #nav {
+        margin: 0 auto;
+        width: 50%;
+        margin-bottom: 50px;
+    }
+    #main_container {
+        margin-bottom: 50px;
+        width: 80%;
+    }
 }

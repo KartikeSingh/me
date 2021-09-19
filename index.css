@@ -7,13 +7,17 @@ body {
     background-color: #1a1a1a;
     counter-reset: heading;
     padding: 40px 20px;
-    text-align: center;
     display: grid;
     grid-template-columns: 20% 75%;
     justify-content: space-between;
 }
 
-#nav ul {
+#nav {
+    display: flex;
+    height: 300px;
+}
+
+#nav ul#nav_list {
     width: 100%;
     float: left;
     box-shadow: 0px 0px 10px 1px white;
@@ -26,14 +30,14 @@ body {
     list-style-type: none;
 }
 
-#nav ul li {
+#nav ul#nav_list li {
     width: 100%;
     border-bottom: 1px solid #3d3d3d;
     border-radius: 5px;
     margin-top: 10px;
 }
 
-#nav ul li a {
+#nav ul#nav_list li a {
     text-decoration: none;
     color: aliceblue;
     font-weight: 700;
@@ -41,22 +45,21 @@ body {
     width: 100%;
 }
 
-ul li:hover {
+ul#nav_list li:hover {
     background-color: #3d3d3d;
     color: #0f0f0f;
 }
 
 #main_container {
-    float: left;
-    width: 80%;
+    width: 90%;
     box-shadow: 0px 0px 10px 1px white;
     border-radius: 8px;
     padding: 20px 24px;
     background-color: #0f0f0f;
     font-family: "Poppins";
     height: 600px;
+    overflow: auto;
     margin: 0 auto;
-    overflow-y: auto;
 }
 
 #profile_picture {
@@ -77,6 +80,7 @@ h2 {
     float: left;
     text-align: left;
     margin: 10px 0px 20px 0px;
+    border-bottom: 1px solid #3d3d3d;
 }
 
 h2::before {
@@ -112,17 +116,65 @@ p {
     text-align: center;
 }
 
-@media only screen and (max-width: 1200px) { 
+.list {
+    color: white;
+    margin: 0;
+}
+
+details, details summary {
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+    float: left;
+}
+
+h3 {
+    color: #f0eeee;
+    width: 100%!important;
+    float: left;
+}
+
+._logo_ {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+p.link_ a {
+    color: rgb(6, 143, 255);
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 800px) {
     body {
-        grid-template-columns: 100%;
+        display: block;
+        margin: 0;
+    }
+    div {
+        margin: 0 auto;
+        margin-bottom: 40px;
+        width: 90%;
     }
     #nav {
-        margin: 0 auto;
+        width: 100%;
+    }
+    #nav ul#nav_list {
         width: 50%;
-        margin-bottom: 50px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #nav {
+        width: 100%;
+    }
+    #nav ul#nav_list {
+        width: 100%;
     }
     #main_container {
-        margin-bottom: 50px;
         width: 80%;
     }
 }

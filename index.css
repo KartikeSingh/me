@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+    box-sizing: content-box;
+}
+
+body {
+    background-color: #1a1a1a;
+    counter-reset: heading;
+    padding: 40px 20px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    justify-content: space-between;
+}
+
+#nav {
+    position: sticky;
+}
+
+#nav ul {
+    width: 60%;
+    float: left;
+    position: sticky;
+    box-shadow: 0px 0px 10px 1px white;
+    border-radius: 8px;
+    padding: 20px 24px;
+    background-color: #0f0f0f;
+    font-family: "Poppins";
+    margin: 0 auto;
+    text-align: center;
+    list-style-type: none;
+}
+
+#nav ul {
+    width: 100%;
+}
+
+#nav ul li {
+    width: 100%;
+    border-bottom: 1px solid #3d3d3d;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#nav ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 20px;
+    width: 100%;
+}
+
+ul li:hover {
+    background-color: #3d3d3d;
+    color: #0f0f0f;
+}
+
+#main_container {
+    float: left;
+    width: 80%;
+    box-shadow: 0px 0px 10px 1px white;
+    border-radius: 8px;
+    padding: 20px 24px;
+    background-color: #0f0f0f;
+    font-family: "Poppins";
+    height: 600px;
+    margin: 0 auto;
+    overflow-y: auto;
+}
+
+#profile_picture {
+    border-radius: 50%;
+}
+
+h1#username {
+    font-size: 80px;
+    margin: 0;
+    padding: 0;
+    color: hsl(39, 100%, 50%);
+}
+
+h2 {
+    color: aliceblue;
+    font-size: 45px;
+    width: 100%;
+    float: left;
+    text-align: left;
+    margin: 10px 0px 20px 0px;
+}
+
+h2::before {
+    counter-increment: heading;
+    content: counter(heading) ". ";
+}
+
+p {
+    color: white;
+    text-align: left;
+    font-size: 22px;
+}
+
+#nav {
+    display: sticky;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 18px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 18px;
+    background: #3d3d3d;
+}
+
+.center {
+    text-align: center;
+}

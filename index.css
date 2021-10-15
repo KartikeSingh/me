@@ -1,74 +1,61 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
 * {
     box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    list-style-type: none;
+    font-family: Poppins;
 }
 
 body {
-    background-color: #1a1a1a;
     counter-reset: heading;
-    padding: 40px 20px;
-    display: grid;
-    grid-template-columns: 20% 75%;
-    justify-content: space-between;
-}
-
-#nav {
-    display: flex;
-    height: 300px;
-}
-
-#nav ul#nav_list {
-    width: 100%;
-    float: left;
-    box-shadow: 0px 0px 10px 1px white;
-    border-radius: 8px;
-    padding: 20px 24px;
-    background-color: #0f0f0f;
-    font-family: "Poppins";
-    margin: 0 auto;
-    text-align: center;
-    list-style-type: none;
-}
-
-#nav ul#nav_list li {
-    width: 100%;
-    border-bottom: 1px solid #3d3d3d;
-    border-radius: 5px;
     margin-top: 10px;
+    text-align: center;
 }
 
-#nav ul#nav_list li a {
+div a {
+    background-color: #0f0f0f;
+    color: white;
     text-decoration: none;
-    color: aliceblue;
-    font-weight: 700;
-    font-size: 20px;
-    width: 100%;
+    padding: 8px 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
 }
 
-ul#nav_list li:hover {
-    background-color: #3d3d3d;
+.rightfloat {
+    float: right;
+    border-right: none;
+}
+
+.link a:hover {
+    background-color: #9c9797;
     color: #0f0f0f;
 }
 
 #main_container {
-    width: 90%;
+    width: 90%!important;
+    height: 600px!important;
+    background-color: #0f0f0f;
+    margin: 0 auto;
     box-shadow: 0px 0px 10px 1px white;
     border-radius: 8px;
     padding: 20px 24px;
-    background-color: #0f0f0f;
-    font-family: "Poppins";
-    height: 600px;
     overflow: auto;
-    margin: 0 auto;
+    color: white;
+    margin-top: 30px;
 }
 
 #profile_picture {
     border-radius: 50%;
+    animation: profile_border 3s linear infinite;
 }
 
 #username {
-    background: -webkit-linear-gradient(left, #f30000 20%, #f36100 40%, #f36100 60%, #f30000 80%);
     background: linear-gradient(90deg, #f30000 20%, #f36100 40%, #f36100 60%, #f30000 80%);
     background-size: 200% auto;
     -webkit-text-fill-color: transparent;
@@ -80,14 +67,13 @@ ul#nav_list li:hover {
     margin: 0px;
 }
 
-@keyframes shine {
-    to {
-        background-position: 200%
-    }
+#main_container p, #main_container h2, #main_container ul {
+    text-align: left;
+    list-style: disc;
 }
 
-h2 {
-    color: aliceblue;
+#main_container h2 {
+    color: antiquewhite;
     font-size: 45px;
     width: 100%;
     float: left;
@@ -101,14 +87,30 @@ h2::before {
     content: counter(heading) ". ";
 }
 
+#main_container h3 {
+    text-align: left;
+    font-size: 25px;
+}
+
 p {
     color: white;
     text-align: left;
+    font-size: 20px;
+}
+
+.center h4 {
     font-size: 22px;
 }
 
-#nav {
-    display: sticky;
+.list {
+    list-style-type: circle;
+    padding: 10px 15px;
+    counter-reset: list_item;
+}
+
+.list li::before {
+    counter-increment: list_item;
+    content: counter(list_item) ". ";
 }
 
 ::-webkit-scrollbar {
@@ -125,77 +127,65 @@ p {
     background: #3d3d3d;
 }
 
-.center {
-    text-align: center;
-}
-
-.list {
-    color: white;
-    margin: 0;
-}
-
-details, details summary {
-    padding: 0;
-    margin: 0;
-    display: block;
-    width: 100%;
-    float: left;
-}
-
-h3 {
-    color: #f0eeee;
-    width: 100%!important;
-}
-
 ._logo_ {
-    width: 30px;
-    height: 30px;
+    width: 23px;
+    height: 23px;
     border-radius: 50%;
 }
 
 p.link_ a {
     color: rgb(6, 143, 255);
     text-decoration: none;
+    font-size: 25px;
 }
 
-#youtube {
-    border-radius: 50%;
-    height: 32px;
-    width: 32px;
+* {
+    background-color: #0f0f0f;
+}
+
+.center {
+    text-align: center;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200%
+    }
+}
+
+@keyframes profile_border {
+    from {
+        box-shadow: 0 0 1px 0px wheat;
+    }
+    to {
+        box-shadow: 0 0 8px 5px white;
+    }
 }
 
 @media only screen and (max-width: 800px) {
-    body {
-        grid-template-columns: 100%;
+    div a {
+        float: left;
         width: 100%;
+        margin-bottom: 0;
+    }
+    div a.rightfloat {
+        float: left;
+    }
+    .link {
+        display: flex;
+        margin: 0 auto;
+        width: 95%;
+        background-color: #0f0f0f;
     }
     #main_container {
-        margin: 0 auto;
-        margin-bottom: 50px;
-        margin-top: 80px;
-        width:80%;
-    }
-    #nav {
-        width: 100%;
-    }
-    #nav ul#nav_list {
-        width: 50%;
-        margin: 0 auto;
-        margin-bottom: 40px;
-        height: 250px;
+        width: 80%!important;
+        overflow-x: hidden;
+        text-align: center;
+        margin-bottom: 30px;
     }
     .card_container, .card_container img {
         width: 100%!important;
         height: auto;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    * {
-        width: 100%;
-        overflow-x: hidden;
-        text-align: center;
-        margin: 0;
-        padding: 0;
+        margin-bottom: 10px;
     }
 }

@@ -152,6 +152,10 @@ p.link_ a:hover {
     animation: shine 2s linear infinite;
 }
 
+.card_container:hover img {
+    animation: card 1s forwards;
+}
+
 * {
     background-color: #0f0f0f;
 }
@@ -183,6 +187,17 @@ p.link_ a:hover {
     to {
         width: 35px;
         height: 35px;
+    }
+}
+
+@keyframes card {
+    from {
+        box-sizing: none;
+        transform: translateY(0);
+    }
+    to {
+        box-shadow: 0 0 15px 5px #676869;
+        transform: translateY(-5px);
     }
 }
 

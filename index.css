@@ -134,10 +134,6 @@ p {
     border-radius: 50%;
 }
 
-._logo_:hover {
-    animation: logo_boom 0.1s forwards;
-}
-
 p.link_ a {
     background: linear-gradient(90deg, #068fff 20%, #068fff 40%, #8600f3 60%, #a600f3 80%);
     background-size: 200% auto;
@@ -179,17 +175,6 @@ p.link_ a:hover {
     }
 }
 
-@keyframes logo_boom {
-    from {
-        width: 23px;
-        height: 23px;
-    }
-    to {
-        width: 35px;
-        height: 35px;
-    }
-}
-
 @keyframes card {
     from {
         box-sizing: none;
@@ -198,6 +183,12 @@ p.link_ a:hover {
     to {
         box-shadow: 0 0 15px 5px #676869;
         transform: translateY(-5px);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .card_container {
+        width: 100%;
     }
 }
 
@@ -226,6 +217,10 @@ p.link_ a:hover {
         width: 100%!important;
         height: auto;
         margin-bottom: 10px;
+    }
+    .card_container {
+        margin: 0 auto;
+        padding: 0;
     }
 }
 
